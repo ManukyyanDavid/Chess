@@ -1,0 +1,237 @@
+﻿<Window x:Class="ChessWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ChessWPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="550" Width="1000">
+
+    <Grid Margin="10,10,44,74">
+
+        <Grid.Resources>
+            <Style TargetType="Border" x:Key="SquareStyle">
+                <Setter Property="Background" Value="White" />
+                <Setter Property="BorderBrush" Value="Black" />
+                <Setter Property="BorderThickness" Value="1" />
+            </Style>
+        </Grid.Resources>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0"  />
+            <ColumnDefinition Width="50" />
+            <ColumnDefinition Width="50" />
+            <ColumnDefinition Width="50" />
+            <ColumnDefinition Width="50" />
+            <ColumnDefinition Width="50" />
+            <ColumnDefinition Width="50" />
+            <ColumnDefinition Width="50" />
+            <ColumnDefinition Width="50" />
+            <ColumnDefinition Width="50" />
+            <ColumnDefinition Width="50" />
+            <ColumnDefinition Width="50" />
+            <ColumnDefinition Width="50" />
+            <ColumnDefinition Width="50" />
+            <ColumnDefinition Width="50" />
+            <ColumnDefinition Width="50" />
+            <ColumnDefinition Width="50" />
+            <ColumnDefinition Width="50" />
+            <ColumnDefinition Width="50" />
+
+        </Grid.ColumnDefinitions>
+
+        <!-- Create the chessboard squares -->
+        <!-- Square Row 0 -->
+        <Border Style="{StaticResource SquareStyle}" Grid.Row="0" Grid.Column="0" Background="White" Grid.ColumnSpan="2"/>
+        <Border Style="{StaticResource SquareStyle}" Grid.Row="1" Grid.Column="0" Background="White" Grid.ColumnSpan="2">
+            <TextBlock Text="1" FontSize ="24" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        </Border>
+        <Border Style="{StaticResource SquareStyle}" Grid.Row="2" Grid.Column="0" Background="White" Grid.ColumnSpan="2">
+            <TextBlock Text="2" FontSize ="24" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        </Border>
+
+        <Border Style="{StaticResource SquareStyle}" Grid.Row="3" Grid.Column="0" Background="White" Grid.ColumnSpan="2">
+            <TextBlock Text="3" FontSize ="24" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        </Border>
+        <Border Style="{StaticResource SquareStyle}" Grid.Row="4" Grid.Column="0" Background="White" Grid.ColumnSpan="2">
+            <TextBlock Text="4" FontSize ="24" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        </Border>
+        <Border Style="{StaticResource SquareStyle}" Grid.Row="5" Grid.Column="0" Background="White" Grid.ColumnSpan="2">
+            <TextBlock Text="5" FontSize ="24" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        </Border>
+        <Border Style="{StaticResource SquareStyle}" Grid.Row="6" Grid.Column="0" Background="White" Grid.ColumnSpan="2">
+            <TextBlock Text="6" FontSize ="24" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        </Border>
+        <Border Style="{StaticResource SquareStyle}" Grid.Row="7" Grid.Column="0" Background="White" Grid.ColumnSpan="2">
+            <TextBlock Text="7" FontSize ="24" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        </Border>
+        <Border Style="{StaticResource SquareStyle}" Grid.Row="8" Grid.Column="0" Background="White" Grid.ColumnSpan="2">
+            <TextBlock Text="8" FontSize ="24" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        </Border>
+
+        <!-- Square Column 0 -->
+        <Border Style="{StaticResource SquareStyle}" Grid.Row="0" Grid.Column="2" Background="White">
+            <TextBlock Text="A" FontSize ="24" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        </Border>
+        <Border Style="{StaticResource SquareStyle}" Grid.Row="0" Grid.Column="3" Background="White">
+            <TextBlock Text="B" FontSize ="24" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        </Border>
+        <Border Style="{StaticResource SquareStyle}" Grid.Row="0" Grid.Column="4" Background="White">
+            <TextBlock Text="C" FontSize ="24" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        </Border>
+        <Border Style="{StaticResource SquareStyle}" Grid.Row="0" Grid.Column="5" Background="White">
+            <TextBlock Text="D" FontSize ="24" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        </Border>
+        <Border Style="{StaticResource SquareStyle}" Grid.Row="0" Grid.Column="6" Background="White">
+            <TextBlock Text="E" FontSize ="24" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        </Border>
+        <Border Style="{StaticResource SquareStyle}" Grid.Row="0" Grid.Column="7" Background="White">
+            <TextBlock Text="F" FontSize ="24" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        </Border>
+        <Border Style="{StaticResource SquareStyle}" Grid.Row="0" Grid.Column="8" Background="White">
+            <TextBlock Text="G" FontSize ="24" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        </Border>
+        <Border Style="{StaticResource SquareStyle}" Grid.Row="0" Grid.Column="9" Background="White">
+            <TextBlock Text="H" FontSize ="24" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        </Border>
+
+
+        <!-- Square Row 1 -->
+        <Border Style="{StaticResource SquareStyle}" Grid.Row="1" Grid.Column="2" Background="Black" />
+        <Border Style="{StaticResource SquareStyle}" Grid.Row="1" Grid.Column="3" Background="Azure" />
+        <Border Style="{StaticResource SquareStyle}" Grid.Row="1" Grid.Column="4" Background="Black" />
+        <Border Style="{StaticResource SquareStyle}" Grid.Row="1" Grid.Column="5" Background="Azure" />
+        <Border Style="{StaticResource SquareStyle}" Grid.Row="1" Grid.Column="6" Background="Black" />
+        <Border Style="{StaticResource SquareStyle}" Grid.Row="1" Grid.Column="7" Background="Azure" />
+        <Border Style="{StaticResource SquareStyle}" Grid.Row="1" Grid.Column="8" Background="Black" />
+        <Border Style="{StaticResource SquareStyle}" Grid.Row="1" Grid.Column="9" Background="Azure" />
+
+        <!-- Square Row 2 -->
+        <Border Style="{StaticResource SquareStyle}" Grid.Row="2" Grid.Column="2" Background="Azure" />
+        <Border Style="{StaticResource SquareStyle}" Grid.Row="2" Grid.Column="3" Background="Black" />
+        <Border Style="{StaticResource SquareStyle}" Grid.Row="2" Grid.Column="4" Background="Azure" />
+        <Border Style="{StaticResource SquareStyle}" Grid.Row="2" Grid.Column="5" Background="Black" />
+        <Border Style="{StaticResource SquareStyle}" Grid.Row="2" Grid.Column="6" Background="Azure" />
+        <Border Style="{StaticResource SquareStyle}" Grid.Row="2" Grid.Column="7" Background="Black" />
+        <Border Style="{StaticResource SquareStyle}" Grid.Row="2" Grid.Column="8" Background="Azure" />
+        <Border Style="{StaticResource SquareStyle}" Grid.Row="2" Grid.Column="9" Background="Black" />
+
+        <!-- Square Row 3 -->
+        <Border Style="{StaticResource SquareStyle}" Grid.Row="3" Grid.Column="2" Background="Black" />
+        <Border Style="{StaticResource SquareStyle}" Grid.Row="3" Grid.Column="3" Background="Azure" />
+        <Border Style="{StaticResource SquareStyle}" Grid.Row="3" Grid.Column="4" Background="Black" />
+        <Border Style="{StaticResource SquareStyle}" Grid.Row="3" Grid.Column="5" Background="Azure" />
+        <Border Style="{StaticResource SquareStyle}" Grid.Row="3" Grid.Column="6" Background="Black" />
+        <Border Style="{StaticResource SquareStyle}" Grid.Row="3" Grid.Column="7" Background="Azure" />
+        <Border Style="{StaticResource SquareStyle}" Grid.Row="3" Grid.Column="8" Background="Black" />
+        <Border Style="{StaticResource SquareStyle}" Grid.Row="3" Grid.Column="9" Background="Azure" />
+
+        <!-- Square Row 4 -->
+        <Border Style="{StaticResource SquareStyle}" Grid.Row="4" Grid.Column="2" Background="Azure" />
+        <Border Style="{StaticResource SquareStyle}" Grid.Row="4" Grid.Column="3" Background="Black" />
+        <Border Style="{StaticResource SquareStyle}" Grid.Row="4" Grid.Column="4" Background="Azure"/>
+        <Border Style="{StaticResource SquareStyle}" Grid.Row="4" Grid.Column="5" Background="Black" />
+        <Border Style="{StaticResource SquareStyle}" Grid.Row="4" Grid.Column="6" Background="Azure"/>
+        <Border Style="{StaticResource SquareStyle}" Grid.Row="4" Grid.Column="7" Background="Black" />
+        <Border Style="{StaticResource SquareStyle}" Grid.Row="4" Grid.Column="8" Background="Azure"/>
+        <Border Style="{StaticResource SquareStyle}" Grid.Row="4" Grid.Column="9" Background="Black" />
+
+        <!-- Square Row 5 -->
+        <Border Style="{StaticResource SquareStyle}" Grid.Row="5" Grid.Column="2" Background="Black"  />
+        <Border Style="{StaticResource SquareStyle}" Grid.Row="5" Grid.Column="3" Background="Azure"/>
+        <Border Style="{StaticResource SquareStyle}" Grid.Row="5" Grid.Column="4" Background="Black" />
+        <Border Style="{StaticResource SquareStyle}" Grid.Row="5" Grid.Column="5" Background="Azure"/>
+        <Border Style="{StaticResource SquareStyle}" Grid.Row="5" Grid.Column="6" Background="Black" />
+        <Border Style="{StaticResource SquareStyle}" Grid.Row="5" Grid.Column="7" Background="Azure"/>
+        <Border Style="{StaticResource SquareStyle}" Grid.Row="5" Grid.Column="8" Background="Black" />
+        <Border Style="{StaticResource SquareStyle}" Grid.Row="5" Grid.Column="9" Background="Azure"/>
+
+        <!-- Square Row 6 -->
+        <Border Style="{StaticResource SquareStyle}" Grid.Row="6" Grid.Column="2" Background="Azure" />
+        <Border Style="{StaticResource SquareStyle}" Grid.Row="6" Grid.Column="3" Background="Black" />
+        <Border Style="{StaticResource SquareStyle}" Grid.Row="6" Grid.Column="4" Background="Azure"/>
+        <Border Style="{StaticResource SquareStyle}" Grid.Row="6" Grid.Column="5" Background="Black" />
+        <Border Style="{StaticResource SquareStyle}" Grid.Row="6" Grid.Column="6" Background="Azure"/>
+        <Border Style="{StaticResource SquareStyle}" Grid.Row="6" Grid.Column="7" Background="Black" />
+        <Border Style="{StaticResource SquareStyle}" Grid.Row="6" Grid.Column="8" Background="Azure"/>
+        <Border Style="{StaticResource SquareStyle}" Grid.Row="6" Grid.Column="9" Background="Black" />
+
+        <!-- Square Row 7 -->
+        <Border Style="{StaticResource SquareStyle}" Grid.Row="7" Grid.Column="2" Background="Black"  />
+        <Border Style="{StaticResource SquareStyle}" Grid.Row="7" Grid.Column="3" Background="Azure"/>
+        <Border Style="{StaticResource SquareStyle}" Grid.Row="7" Grid.Column="4" Background="Black" />
+        <Border Style="{StaticResource SquareStyle}" Grid.Row="7" Grid.Column="5" Background="Azure"/>
+        <Border Style="{StaticResource SquareStyle}" Grid.Row="7" Grid.Column="6" Background="Black" />
+        <Border Style="{StaticResource SquareStyle}" Grid.Row="7" Grid.Column="7" Background="Azure"/>
+        <Border Style="{StaticResource SquareStyle}" Grid.Row="7" Grid.Column="8" Background="Black" />
+        <Border Style="{StaticResource SquareStyle}" Grid.Row="7" Grid.Column="9" Background="Azure"/>
+
+        <!-- Square Row 8 -->
+        <Border Style="{StaticResource SquareStyle}" Grid.Row="8" Grid.Column="2" Background="Azure" />
+        <Border Style="{StaticResource SquareStyle}" Grid.Row="8" Grid.Column="3" Background="Black" />
+        <Border Style="{StaticResource SquareStyle}" Grid.Row="8" Grid.Column="4" Background="Azure" />
+        <Border Style="{StaticResource SquareStyle}" Grid.Row="8" Grid.Column="5" Background="Black" />
+        <Border Style="{StaticResource SquareStyle}" Grid.Row="8" Grid.Column="6" Background="Azure" />
+        <Border Style="{StaticResource SquareStyle}" Grid.Row="8" Grid.Column="7" Background="Black" />
+        <Border Style="{StaticResource SquareStyle}" Grid.Row="8" Grid.Column="8" Background="Azure" />
+        <Border Style="{StaticResource SquareStyle}" Grid.Row="8" Grid.Column="9" Background="Black" />
+
+        <!-- Create chess figures-->
+        <Border Style="{StaticResource SquareStyle}" Name ="BKing" Grid.Row="1" Grid.Column="10" Grid.ColumnSpan="2" Margin="48,0,2,0" >
+            <Image Source="\\Mac\Home\Desktop\CHESS\ChessWPF\FigureImages\Screenshot 2023-07-09 at 23.05.35.png" Width="45" Height="45" 
+                   PreviewMouseLeftButtonDown="Image_PreviewMouseLeftButtonDown"
+                   PreviewMouseMove="Image_PreviewMouseMove"
+                   PreviewMouseLeftButtonUp="Image_PreviewMouseLeftButtonUp"/>
+        </Border>
+        <Border Style="{StaticResource SquareStyle}" Name ="BQueen" Grid.Row="1" Grid.Column="11" Grid.ColumnSpan="2" Margin="48,0,2,0" >
+            <Image Source="\\Mac\Home\Desktop\CHESS\ChessWPF\FigureImages\Screenshot 2023-07-09 at 23.05.42.png" Width="45" Height="45" />
+        </Border>
+        <Border Style="{StaticResource SquareStyle}" Grid.Row="1" Grid.Column="12" Grid.ColumnSpan="2" Margin="48,0,2,0" >
+            <Image Source="\\Mac\Home\Desktop\CHESS\ChessWPF\FigureImages\Screenshot 2023-07-09 at 23.05.48.png" Width="45" Height="45" Margin="1,1,1,1" />
+        </Border>
+        <Border Style="{StaticResource SquareStyle}" Grid.Row="1" Grid.Column="13" Grid.ColumnSpan="2" Margin="48,0,2,0" >
+            <Image Source="\\Mac\Home\Desktop\CHESS\ChessWPF\FigureImages\Screenshot 2023-07-09 at 23.05.57.png" Width="45" Height="45" />
+        </Border>
+        <Border Style="{StaticResource SquareStyle}" Grid.Column="15" Grid.Row="1" >
+            <Image Source="\\Mac\Home\Desktop\CHESS\ChessWPF\FigureImages\Screenshot 2023-07-09 at 23.06.06.png" Width="45" Height="45" />
+        </Border>
+        <Border Style="{StaticResource SquareStyle}" Grid.Row="1" Grid.Column="16" >
+            <Image Source="\\Mac\Home\Desktop\CHESS\ChessWPF\FigureImages\Screenshot 2023-07-09 at 23.06.11.png" Width="45" Height="45" />
+        </Border>
+        <Border Style="{StaticResource SquareStyle}" Grid.Row="2" Grid.Column="10" Grid.ColumnSpan="2" Margin="48,0,2,0" >
+            <Image Source="\\Mac\Home\Desktop\CHESS\ChessWPF\FigureImages\Screenshot 2023-07-09 at 23.06.29.png" Width="45" Height="45" 
+                   PreviewMouseLeftButtonDown="Image_PreviewMouseLeftButtonDown"/>
+        </Border>
+        <Border Style="{StaticResource SquareStyle}" Grid.Row="2" Grid.Column="11" Grid.ColumnSpan="2" Margin="48,0,2,0" >
+            <Image Source="\\Mac\Home\Desktop\CHESS\ChessWPF\FigureImages\Screenshot 2023-07-09 at 23.06.45.png" Width="45" Height="45" 
+                   PreviewMouseLeftButtonDown="Image_PreviewMouseLeftButtonDown"/>
+        </Border>
+        <Border Style="{StaticResource SquareStyle}" Grid.Row="2" Grid.Column="12" Grid.ColumnSpan="2" Margin="48,0,2,0" >
+            <Image Source="\\Mac\Home\Desktop\CHESS\ChessWPF\FigureImages\Screenshot 2023-07-09 at 23.06.53.png" Width="45" Height="45" 
+                   PreviewMouseLeftButtonDown="Image_PreviewMouseLeftButtonDown"/>
+        </Border>
+        <Border Style="{StaticResource SquareStyle}" Grid.Row="2" Grid.Column="13" Grid.ColumnSpan="2" Margin="48,0,2,0" >
+            <Image Source="\\Mac\Home\Desktop\CHESS\ChessWPF\FigureImages\Screenshot 2023-07-09 at 23.06.59.png" Width="45" Height="45" Margin="1,2,1,1" />
+        </Border>
+        <Border Style="{StaticResource SquareStyle}" Grid.Row="2" Grid.Column="15" >
+            <Image Source="\\Mac\Home\Desktop\CHESS\ChessWPF\FigureImages\Screenshot 2023-07-09 at 23.07.05.png" Width="45" Height="45" />
+        </Border>
+        <Border Style="{StaticResource SquareStyle}" Grid.Row="2" Grid.Column="16" >
+            <Image Source="\\Mac\Home\Desktop\CHESS\ChessWPF\FigureImages\Screenshot 2023-07-09 at 23.07.11.png" Width="45" Height="45" />
+        </Border>
+
+
+    </Grid>
+</Window>

@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33801.468
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChessProject", "ChessProject\ChessProject.csproj", "{C1667DF0-12CC-44D2-93D6-0F9AF93C34B5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChessLibrary", "ChessLibrary\ChessLibrary.csproj", "{3FC14FBF-6178-448C-883B-8552572BFC05}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChessWPF", "ChessWPF\ChessWPF.csproj", "{CCFD1BD5-B734-4BE3-8C99-4F22AC2BF2BC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Console|Any CPU = Console|Any CPU
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C1667DF0-12CC-44D2-93D6-0F9AF93C34B5}.Console|Any CPU.ActiveCfg = Console|Any CPU
+		{C1667DF0-12CC-44D2-93D6-0F9AF93C34B5}.Console|Any CPU.Build.0 = Console|Any CPU
+		{C1667DF0-12CC-44D2-93D6-0F9AF93C34B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1667DF0-12CC-44D2-93D6-0F9AF93C34B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1667DF0-12CC-44D2-93D6-0F9AF93C34B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1667DF0-12CC-44D2-93D6-0F9AF93C34B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3FC14FBF-6178-448C-883B-8552572BFC05}.Console|Any CPU.ActiveCfg = Console|Any CPU
+		{3FC14FBF-6178-448C-883B-8552572BFC05}.Console|Any CPU.Build.0 = Console|Any CPU
+		{3FC14FBF-6178-448C-883B-8552572BFC05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3FC14FBF-6178-448C-883B-8552572BFC05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3FC14FBF-6178-448C-883B-8552572BFC05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3FC14FBF-6178-448C-883B-8552572BFC05}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CCFD1BD5-B734-4BE3-8C99-4F22AC2BF2BC}.Console|Any CPU.ActiveCfg = Debug|Any CPU
+		{CCFD1BD5-B734-4BE3-8C99-4F22AC2BF2BC}.Console|Any CPU.Build.0 = Debug|Any CPU
+		{CCFD1BD5-B734-4BE3-8C99-4F22AC2BF2BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CCFD1BD5-B734-4BE3-8C99-4F22AC2BF2BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CCFD1BD5-B734-4BE3-8C99-4F22AC2BF2BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CCFD1BD5-B734-4BE3-8C99-4F22AC2BF2BC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
