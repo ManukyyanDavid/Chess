@@ -75,7 +75,7 @@ public class King : IFigure
     /// <param name="board">Returns string type two-dimensional array representing chessboard with legal steps.</param>
     public void AddLegalSteps(string[,] board)
     {
-        if (board[Row, Column] == null || board[Row, Column] == Name)
+        if (board[Row, Column] == null/* || board[Row, Column] == Name*/)
         {
             board[Row, Column] = Name;
         }

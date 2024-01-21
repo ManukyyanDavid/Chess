@@ -29,6 +29,7 @@ public class Board
     //contains string symbols of white figures
     public static string[] whitefiguresSymbols = new []{"1", "2", "3", "4"};
 
+    
     //string type variable representing the segment of the board(based on the positions of two kings)
     public static IdentifyBoardSegment delSegment = new IdentifyBoardSegment(IdentifySegment);
     
@@ -84,11 +85,11 @@ public class Board
         IFigure wk = boardObj.Figures[0];
         IFigure bk = boardObj.Figures[4];
         string segment;
-        if (wk.Row - bk.Row > 1)
+        if (wk.Row - bk.Row > 0)
         {
             segment = "upper";
         }
-        else if (bk.Row - wk.Row > 1)
+        else if (bk.Row - wk.Row > 0)
         {
             segment = "lower";
         }

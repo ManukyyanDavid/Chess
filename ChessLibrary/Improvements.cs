@@ -11,10 +11,11 @@ namespace ChessLibrary;
 
 public class Improvements
 {
-    public static Board ImprovePositonHorizontal(Board boardObj, IFigure figure)
+    public static (Board boardObj, bool success) ImprovePositionHorizontal(Board boardObj, IFigure figure )
     {
+        bool success = false;
         IFigure bk = boardObj.Figures[4];
-        bool check = false;
+        
         if (bk.Column <= 3)
         {
             for (int i = 7; i > 3; i--)
@@ -25,24 +26,9 @@ public class Improvements
                     !boardObj.BoardWithFiguresSteps[figure.Row, i].Contains("c") &&
                     !boardObj.BoardWithFiguresSteps[figure.Row, i].Contains("d"))
                 {
-                   // check if in column there are any other figures
-                    //for (int j = 0; j < 7; j++)
-                    //{
-                    //    if (boardObj.BoardWithFiguresSteps[j, i].Contains("b") ||
-                    //        boardObj.BoardWithFiguresSteps[j, i] ==null ||
-                    //         boardObj.BoardWithFiguresSteps[j, i].Contains("c") ||
-                    //         boardObj.BoardWithFiguresSteps[j, i].Contains("d"))
-                    //    {
-                    //        check = true;
-                    //        break;
-                    //    }
-                    //}
-                    //if (!check)
-                    //{
                         boardObj = Board.UpdateBoard(boardObj, boardObj.Figures, figure, figure.Row, i);
+                    success = true;
                         break;
-                    //}
-                    //check= false;
                 }
             }
         }
@@ -57,10 +43,50 @@ public class Improvements
                     !boardObj.BoardWithFiguresSteps[figure.Row, i].Contains("d"))
                 {
                     boardObj = Board.UpdateBoard(boardObj, boardObj.Figures, figure, figure.Row, i);
+                    success = true;
                     break;
                 }
             }
         }
-        return boardObj;
+        return (boardObj, success);
+    }
+    public static (Board boardObj, bool success) ImprovePositonVertical(Board boardObj, IFigure figure)
+    {
+        IFigure bk = boardObj.Figures[4];
+        bool success = false;
+        if (bk.Row <= 3)
+        {
+            for (int i = 7; i > 3; i--)
+            {
+                if (boardObj.BoardWithFiguresSteps[i,figure.Column].Contains(figure.StepSymbol) &&
+                    !boardObj.BoardWithFiguresSteps[i,figure.Column].Contains("a") &&
+                    !boardObj.BoardWithFiguresSteps[i,figure.Column].Contains("b") &&
+                    !boardObj.BoardWithFiguresSteps[i,figure.Column].Contains("c") &&
+                    !boardObj.BoardWithFiguresSteps[i, figure.Column].Contains("d"))
+                {
+                    boardObj = Board.UpdateBoard(boardObj, boardObj.Figures, figure, i, figure.Column);
+                    success = true;
+                    break;
+                }
+
+            }       
+        }
+        else
+        {
+            for (int i = 0; i < 4; i++)
+            {
+                if (boardObj.BoardWithFiguresSteps[i, figure.Column].Contains(figure.StepSymbol) &&
+                    !boardObj.BoardWithFiguresSteps[i, figure.Column].Contains("a") &&
+                    !boardObj.BoardWithFiguresSteps[i, figure.Column].Contains("b") &&
+                    !boardObj.BoardWithFiguresSteps[i, figure.Column].Contains("c") &&
+                    !boardObj.BoardWithFiguresSteps[i, figure.Column].Contains("d"))
+                {
+                    boardObj = Board.UpdateBoard(boardObj, boardObj.Figures, figure, i, figure.Column);
+                    success = true;
+                    break;
+                }
+            }
+        }
+        return (boardObj, success);
     }
 }
